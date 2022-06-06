@@ -7,8 +7,6 @@ import User from './User';
 import { IMongoDBUser } from './types'
 const mongoose = require("mongoose")
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-// const TwitterStrategy = require('passport-twitter').Strategy;
-// const GitHubStrategy = require('passport-github').Strategy;
 
 dotenv.config();
 
@@ -25,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI, {
 // Middleware
 app.use(express.json());
 app.use(cors({ 
-    origin: "http://localhost:3000", 
+    origin: "https://react-passport-deploy.netlify.app", 
     credentials: true 
 }))
 
