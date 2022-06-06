@@ -86,9 +86,9 @@ passport.use(new GoogleStrategy({
 app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
 
 app.get('/auth/google/callback',
-  passport.authenticate('google', { failureRedirect: 'http://localhost:3000', session: true }),
+  passport.authenticate('google', { failureRedirect: 'https://react-passport-deploy.netlify.app', session: true }),
   function (req, res) {
-    res.redirect('http://localhost:3000');
+    res.redirect('https://react-passport-deploy.netlify.app');
   });
   
 // -----------------------------
